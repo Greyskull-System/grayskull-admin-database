@@ -1,0 +1,3 @@
+# Pre-commit hook
+# Uncomment below to run tests before each commit (can be slow)
+# npm test

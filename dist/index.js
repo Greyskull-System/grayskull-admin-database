@@ -16,7 +16,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PrismaClient = exports.adminPrisma = void 0;
 const client_1 = require("../generated/client");
-// Singleton pattern para evitar múltiplas conexões
+// Singleton pattern para evitar múltiplas conexões 
 const globalForPrisma = globalThis;
 exports.adminPrisma = globalForPrisma.adminPrisma ??
     new client_1.PrismaClient({

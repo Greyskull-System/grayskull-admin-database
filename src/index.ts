@@ -1,6 +1,6 @@
 import { PrismaClient } from '../generated/client';
 
-// Singleton pattern para evitar múltiplas conexões
+// Singleton pattern para evitar múltiplas conexões 
 const globalForPrisma = globalThis as unknown as {
   adminPrisma: PrismaClient | undefined;
 };

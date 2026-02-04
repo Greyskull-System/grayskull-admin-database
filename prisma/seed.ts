@@ -155,6 +155,23 @@ async function main() {
   console.log(`   ✅ Plano: ${enterprisePlan.name} - R$ ${enterprisePlan.price}/mês (${allModules.length} módulo(s))`);
 
   // ============================================================
+  // 4. TEMPLATES - Templates para geração de projetos
+  // ============================================================
+  console.log('\n📄 Configurando templates...');
+
+  const spolierTemplate = await prisma.template.upsert({
+    where: { code: 'spolier' },
+    update: { name: 'Spolier', description: 'Template baseado no frontend Spolier (Core + Chat)', sourcePath: 'spolier/frontend' },
+    create: {
+      code: 'spolier',
+      name: 'Spolier',
+      description: 'Template baseado no frontend Spolier (Core + Chat)',
+      sourcePath: 'spolier/frontend',
+    },
+  });
+  console.log(`   ✅ Template: ${spolierTemplate.name} (${spolierTemplate.code})`);
+
+  // ============================================================
   // RESUMO
   // ============================================================
   console.log('\n════════════════════════════════════════════════════════════════');

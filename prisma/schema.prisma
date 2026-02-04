@@ -263,6 +263,24 @@ enum InvoiceStatus {
 }
 
 // ============================================================
+// TEMPLATES - Templates para geração de projetos (frontend/backend)
+// ============================================================
+
+model Template {
+  id          String   @id @default(uuid())
+  code        String   @unique // ex: spolier
+  name        String
+  description String?
+  // Caminho relativo à base de templates (ex: spolier/frontend)
+  sourcePath  String?
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("templates")
+}
+
+// ============================================================
 // AUDIT LOG - Log de auditoria
 // ============================================================
 

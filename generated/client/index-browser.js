@@ -249,6 +249,17 @@ exports.Prisma.InvoiceScalarFieldEnum = {
   subscriptionId: 'subscriptionId'
 };
 
+exports.Prisma.TemplateScalarFieldEnum = {
+  id: 'id',
+  code: 'code',
+  name: 'name',
+  description: 'description',
+  sourcePath: 'sourcePath',
+  isActive: 'isActive',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
 exports.Prisma.AuditLogScalarFieldEnum = {
   id: 'id',
   action: 'action',
@@ -325,6 +336,7 @@ exports.Prisma.ModelName = {
   TenantModule: 'TenantModule',
   Subscription: 'Subscription',
   Invoice: 'Invoice',
+  Template: 'Template',
   AuditLog: 'AuditLog'
 };
 
